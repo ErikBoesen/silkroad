@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Silk Road Project</title>
+        <meta name="viewport" content="initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link rel="stylesheet" href="css/popup.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/modal.css">
+        <link rel="icon" type="image/png" href="favicon.png">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+    </head>
+
+    <body class="loading">
+        <div id="preloader">
+            <div class="globe">
+                <img src="img/earth.svg">
+            </div>
+        </div>
+        <div id="map" class="loading"></div>
+        <div id="options">
+            <label for="option-year">Year: </label>
+            <select id="option-year">
+                <!-- Options populated by JS -->
+            </select>
+            <input type="checkbox" id="options-toggle">
+            <img id="options-toggle-image" src="img/gear.svg">
+            <div id="options-dropdown">
+                <div class="option">
+                    <label for="option-pan">Pan To Markers: </label>
+                    <input id="option-pan" type="checkbox" checked>
+                </div>
+                <div class="option">
+                    <label for="option-precedence">Marker Precedence: </label>
+                    <select id="option-precedence">
+                        <option>Top</option>
+                        <option selected>Bottom</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!--
+        <div id="branding">
+            <p class="branding-info">Senior project by <a target="_blank" rel="noopener" href="https://erikboesen.com">Erik Boesen</a> '19</p>
+        </div>
+        -->
+    </body>
+    <script src="js/popup.js"></script>
+    <script src="js/scripts.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzgwBrMoKv9ynoO2TyjXPNqE4IlKEtpxE&callback=initMap" async defer></script>
+</html>
