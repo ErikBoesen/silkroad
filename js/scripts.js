@@ -14,14 +14,126 @@ const elements = {
 var panToMarkers = true;
 var popupOpen = false;
 
+const ACCENT = '#2986cc',
+      SHADE_1 = '#222222',
+      SHADE_2 = '#333333',
+      SHADE_3 = '#444444',
+      SHADE_4 = '#666666',
+      WRITING = '#ffffff';
+
+var MAP_STYLES = [
+    {
+        featureType: 'water',
+        elementType: 'geometry',
+        stylers: [{
+            color: SHADE_1
+        }]
+    },
+    {
+        featureType: 'landscape',
+        elementType: 'geometry',
+        stylers: [{
+            color: SHADE_3
+        }]
+    },
+    {
+        featureType: 'road',
+        elementType: 'geometry',
+        stylers: [
+            {
+                color: SHADE_3
+            },
+            {
+                lightness: -37
+            }
+        ]
+    },
+    {
+        featureType: 'poi',
+        elementType: 'geometry',
+        stylers: [{
+            color: SHADE_4
+        }]
+    },
+    {
+        elementType: 'labels.text.stroke',
+        stylers: [
+            {
+                visibility: 'on'
+            },
+            {
+                color: SHADE_4
+            },
+            {
+                weight: 2
+            },
+            {
+                gamma: 0.84
+            }
+        ]
+    },
+    {
+        elementType: 'labels.text.fill',
+        stylers: [{
+            color: WRITING
+        }]
+    },
+    {
+        featureType: 'administrative',
+        elementType: 'geometry',
+        stylers: [
+            {
+                weight: 0.6
+            },
+            {
+                color: SHADE_3
+            }
+        ]
+    },
+    {
+        featureType: 'administrative.country',
+        elementType: 'geometry',
+        stylers: [{
+            color: ACCENT
+        }]
+    },
+    {
+        featureType: 'administrative.province',
+        elementType: 'geometry',
+        stylers: [{
+            color: ACCENT
+        }]
+    },
+    {
+        elementType: 'labels.icon',
+        stylers: [{
+            visibility: 'off'
+        }]
+    },
+    {
+        featureType: 'poi.park',
+        elementType: 'geometry',
+        stylers: [{
+            color: SHADE_2
+        }]
+    },
+    {
+        featureType: 'poi.school',
+        elementType: 'geometry',
+        stylers: [{
+            color: ACCENT
+        }]
+    }
+];
+
 // Called by Maps API upon loading.
 function initMap() {
     definePopupClass();
 
     map = new google.maps.Map(elements.map, { // Define Map Settings
         center: {
-            lat: 35,
-            lng: -98
+            lat: 38,
+            lng: 78
         },
         zoom: 4,
         disableDefaultUI: true,
@@ -31,7 +143,7 @@ function initMap() {
         rotateControl: false,
         fullscreenControl: true,
         backgroundColor: '#333333',
-        styles: mapStyles
+        styles: MAP_STYLES,
     });
 
     setTimeout(function() {
@@ -141,108 +253,3 @@ function transitionEnd(element, transitionProperty) {
         element.addEventListener('transitionend', callback);
     });
 }
-
-var mapStyles = [
-    {
-        featureType: 'water',
-        elementType: 'geometry',
-        stylers: [{
-            color: '#222222'
-        }]
-    },
-    {
-        featureType: 'landscape',
-        elementType: 'geometry',
-        stylers: [{
-            color: '#444444'
-        }]
-    },
-    {
-        featureType: 'road',
-        elementType: 'geometry',
-        stylers: [
-            {
-                color: '#444444'
-            },
-            {
-                lightness: -37
-            }
-        ]
-    },
-    {
-        featureType: 'poi',
-        elementType: 'geometry',
-        stylers: [{
-            color: '#666666'
-        }]
-    },
-    {
-        elementType: 'labels.text.stroke',
-        stylers: [
-            {
-                visibility: 'on'
-            },
-            {
-                color: '#666666'
-            },
-            {
-                weight: 2
-            },
-            {
-                gamma: 0.84
-            }
-        ]
-    },
-    {
-        elementType: 'labels.text.fill',
-        stylers: [{
-            color: '#ffffff'
-        }]
-    },
-    {
-        featureType: 'administrative',
-        elementType: 'geometry',
-        stylers: [
-            {
-                weight: 0.6
-            },
-            {
-                color: '#444444'
-            }
-        ]
-    },
-    {
-        featureType: 'administrative.country',
-        elementType: 'geometry',
-        stylers: [{
-            color: '#d12727'
-        }]
-    },
-    {
-        featureType: 'administrative.province',
-        elementType: 'geometry',
-        stylers: [{
-            color: '#d12727'
-        }]
-    },
-    {
-        elementType: 'labels.icon',
-        stylers: [{
-            visibility: 'off'
-        }]
-    },
-    {
-        featureType: 'poi.park',
-        elementType: 'geometry',
-        stylers: [{
-            color: '#333333'
-        }]
-    },
-    {
-        featureType: 'poi.school',
-        elementType: 'geometry',
-        stylers: [{
-            color: '#d12727'
-        }]
-    }
-];
