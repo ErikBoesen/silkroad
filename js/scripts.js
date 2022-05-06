@@ -1,5 +1,6 @@
 var map, popup, Popup, markers = [];
 const elements = {
+    preloader: document.getElementById('preloader'),
     map: document.getElementById('map'),
     /*
     options: {
@@ -33,45 +34,13 @@ function initMap() {
         styles: mapStyles
     });
 
-    elements.map.classList.remove('loading');
-    if (yearDocuments.get(year).formURL) {
-        elements.submitDestination.submitLink.href =
-            yearDocuments.get(year).formURL;
-        elements.submitDestination.submitYear.textContent = year;
-    }
+    setTimeout(function() {
+        document.body.classList.remove('loading');
+    }, 800);
 }
 
 function clearPopups() {
     if (popup) popup.setMap(null);
-}
-
-function buildInstitutionData(year) {
-    var institutions = {};
-    for (student of students.get(year)) {
-        if (!institutions[student['Institution name']]) { // If the institution isn't already in the object
-            if (!coordinates.has(student['Institution name'])) {
-                console.error('No location data found for Institution: ' + student['Institution name']);
-            }
-
-            institutions[student['Institution name']] = {
-                name: student['Institution name'],
-                students: [],
-                position: coordinates.get(student['Institution name']),
-            }
-        }
-        institutions[student['Institution name']].students.push({
-            name: student['First name'] + ' ' + student['Last name'],
-            major: student['Intended major(s) or field(s) of study'],
-        });
-    }
-
-    for ([ institutionName, logoURL ] of logos) {
-        if (institutions[institutionName]) {
-            institutions[institutionName].logo = logoURL;
-        }
-    }
-
-    return institutions;
 }
 
 function placeMarkers(institutions) {
