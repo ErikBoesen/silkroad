@@ -94,6 +94,18 @@ button:active, a.button:active {
 div a[rel="noopener"] img {
     display: none !important;
 }
+.gm-style button, .gmnoprint .gmnoprint > div {
+    background: #333 !important;
+}
+.gmnoprint, .gmnoprint div, .gmnoprint button {
+    border-radius: 40px !important;
+}
+.gmnoprint button img, .gm-style button img {
+    filter: brightness(100);
+}
+.gmnoprint div div div {
+    display: none;
+}
 #map {
     transition: filter ease 0.75s;
 }
