@@ -3,12 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
-html, body, #map { height: 100%; }
+html, body, main, aside, #map { height: 100%; }
 body {
     background-color: #333;
     color: #333;
     font-size: 16px;
     font-family: 'Lato', sans-serif;
+    overflow-y: hidden;
 }
 #preloader {
     position: fixed;
@@ -90,11 +91,14 @@ button:active, a.button:active {
     background-color: rgba(189, 29, 37, 0.8);
 }
 /* Google stuff */
+/* Google logo */
 .gmnoscreen, .gmnoprint a, .gm-style-cc,
-div a[rel="noopener"] img {
+div a[rel="noopener"] img,
+/* Fullscreen button */
+.gm-fullscreen-control {
     display: none !important;
 }
-.gm-style button, .gmnoprint .gmnoprint > div {
+.gmnoprint .gmnoprint > div {
     background: #333 !important;
 }
 .gmnoprint, .gmnoprint div, .gmnoprint button {
@@ -134,6 +138,18 @@ div a[rel="noopener"] img {
     font-size: 40px;
     height: 55px;
     z-index: 5;
+}
+main {
+    transition: .4s transform;
+}
+main.open {
+    transform: translateX(-400px);
+}
+aside {
+    width: 400px;
+    top: 0;
+    right: 0;
+    position: absolute;
 }
 @media (max-width: 950px) {
     .branding-info {

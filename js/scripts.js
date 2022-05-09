@@ -4,6 +4,8 @@ const elements = {
     map: document.getElementById('map'),
     playButton: document.getElementById('play_button'),
     audio: document.getElementById('audio'),
+    main: document.getElementsByTagName('main')[0],
+    aside: document.getElementsByTagName('aside')[0],
 };
 
 var panToMarkers = true;
@@ -165,8 +167,11 @@ function clearPopups() {
 function placeMarkers(sites) {
     clearMarkers();
 
-    for (site in sites) {
-        let marker = new google.maps.Marker(site);
+    for (let site of sites) {
+        let marker = new google.maps.Marker({
+            position: new google.maps.LatLng(site.lat, site.lng),
+            title: site.location,
+        });
         google.maps.event.addListener(marker, 'click', function() {
             details(this);
 
@@ -177,12 +182,14 @@ function placeMarkers(sites) {
                 var offsetPerStudent = 40 * scale;
 
                 worldCoordinate.y -= defaultOffset +
-                    (offsetPerStudent * Math.min(5, this.students.length));
+                    (offsetPerStudent * Math.min(5, sites.length));
                 worldCoordinate.y = Math.max(0, worldCoordinate.y);
 
                 var latLng = map.getProjection().fromPointToLatLng(worldCoordinate);
                 map.panTo(latLng);
             }
+
+            elements.main.classList.add('open');
         });
         marker.setMap(map);
         markers.push(marker);
@@ -194,6 +201,7 @@ function clearMarkers() {
         marker.setMap(null);
     }
     markers = [];
+    elements.main.classList.remove('open');
 }
 
 function details(institution) {
