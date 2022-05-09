@@ -198,13 +198,29 @@ function placeMarkers(sites) {
     }
 }
 
-function details(institution) {
+function details(marker) {
     clearPopups();
+    // Create popup
     var info = document.createElement('div');
-    popup = new Popup(new google.maps.LatLng(institution.position.lat(), institution.position.lng()), info);
+    popup = new Popup(new google.maps.LatLng(marker.position.lat(), marker.position.lng()), info);
     popup.setMap(map);
     console.log('Adding popup');
     popupOpen = true;
+
+    // Create sidebar content
+    elements.title.textContent = marker.site.location;
+    elements.description.textContent = '';
+    console.log(marker.site);
+    console.log(marker.site.art);
+    for (let piece of marker.site.art) {
+        console.log(piece);
+        let img = document.createElement('img');
+        img.src = '/img/art/' + piece.image;
+        elements.description.append(img);
+        let p = document.createElement('p');
+        p.textContent = piece.text;
+        elements.description.append(p);
+    }
 }
 
 var dragged = false;
