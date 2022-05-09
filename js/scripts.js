@@ -21,7 +21,7 @@ const ACCENT = '#2986cc',
       SHADE_4 = '#666666',
       WRITING = '#ffffff';
 
-var MAP_STYLES = [
+const MAP_STYLES = [
     {
         featureType: 'water',
         elementType: 'geometry',
@@ -146,20 +146,32 @@ function initMap() {
         styles: MAP_STYLES,
     });
 
-    setTimeout(function() {
-        document.body.classList.remove('loading');
-    }, 800);
+    Promise.all([
+        getSites(),
+    ]).then(function() {
+        setTimeout(function() {
+            document.body.classList.remove('loading');
+        }, 800);
+    });
+}
+
+async function getSites() {
+    return fetch('/sites.json')
+        .then(request => request.json())
+        .then(sites => {
+            placeMarkers(sites);
+        });
 }
 
 function clearPopups() {
     if (popup) popup.setMap(null);
 }
 
-function placeMarkers(institutions) {
+function placeMarkers(sites) {
     clearMarkers();
 
-    for (name in institutions) {
-        let marker = new google.maps.Marker(institutions[name]);
+    for (site in sites) {
+        let marker = new google.maps.Marker(site);
         google.maps.event.addListener(marker, 'click', function() {
             details(this);
 
@@ -180,7 +192,6 @@ function placeMarkers(institutions) {
         marker.setMap(map);
         markers.push(marker);
     }
-    setMarkerPrecedence(elements.options.precedence.value == 'Bottom');
 }
 
 function clearMarkers() {

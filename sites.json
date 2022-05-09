@@ -1,7 +1,9 @@
 [
     {
-        "lat": 41.494649,
-        "lon": 110.2137863,
+        "position": {
+            "lat": 41.494649,
+            "lng": 110.2137863
+        },
         "location": "Paoshan, Inner Mongolia, China",
         "date": "907-1125",
         "culture": "Liao Dynasty",
@@ -17,13 +19,14 @@
         ]
     },
     {
-        "lat": 39.4929331,
-        "lon": 67.6053653,
+        "position": {
+            "lat": 39.4929331,
+            "lng": 67.6053653
+        },
         "location": "Panjakent, Modern Tajikistan",
         "date": "",
         "culture": "Sogdians",
         "art": [
-
         ]
     }
 ]
