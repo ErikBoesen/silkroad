@@ -162,11 +162,10 @@ async function getSites() {
 
 function clearPopups() {
     if (popup) popup.setMap(null);
+    elements.main.classList.remove('open');
 }
 
 function placeMarkers(sites) {
-    clearMarkers();
-
     for (let site of sites) {
         let marker = new google.maps.Marker({
             position: new google.maps.LatLng(site.lat, site.lng),
@@ -194,14 +193,6 @@ function placeMarkers(sites) {
         marker.setMap(map);
         markers.push(marker);
     }
-}
-
-function clearMarkers() {
-    for (marker of markers) {
-        marker.setMap(null);
-    }
-    markers = [];
-    elements.main.classList.remove('open');
 }
 
 function details(institution) {
