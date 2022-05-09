@@ -2,13 +2,8 @@ var map, popup, Popup, markers = [];
 const elements = {
     preloader: document.getElementById('preloader'),
     map: document.getElementById('map'),
-    /*
-    options: {
-        year: document.getElementById('option-year'),
-        pan: document.getElementById('option-pan'),
-        precedence: document.getElementById('option-precedence'),
-    }
-    */
+    playButton: document.getElementById('play_button'),
+    audio: document.getElementById('audio'),
 };
 
 var panToMarkers = true;
@@ -253,14 +248,12 @@ onkeydown = function(e) {
     }
 }
 
-function transitionEnd(element, transitionProperty) {
-    return new Promise(function(resolve, _) {
-        var callback = function(event) {
-            if (event.propertyName === transitionProperty) {
-                element.removeEventListener('transitionend', callback);
-                resolve();
-            }
-        };
-        element.addEventListener('transitionend', callback);
-    });
+elements.playButton.onclick = function() {
+    if (elements.audio.paused) {
+        elements.audio.play();
+        playButton.textContent = '||';
+    } else {
+        elements.audio.pause();
+        playButton.textContent = '▶';
+    }
 }
