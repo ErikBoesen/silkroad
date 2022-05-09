@@ -124,69 +124,16 @@ div a[rel="noopener"] img {
 #logo {
     width: 100%;
 }
-#options {
+#play_button {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
+    background: none;
+    border: none;
     padding: 10px;
-    color: white;
-    width: 200px;
-    height: auto;
-    background: #222;
+    font-size: 40px;
+    height: 55px;
     z-index: 5;
-}
-#options label {
-    margin-right: 5px;
-}
-#options select {
-    border: solid 1px #555;
-    padding: 3px;
-    border-radius: 5px;
-}
-#options input[type="checkbox"] {
-    vertical-align: baseline;
-}
-#options #options-toggle, #options #options-toggle-image {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    width: 25px;
-    height: 25px;
-}
-#options #options-toggle {
-    opacity: 0;
-}
-#options #options-toggle:checked + #options-toggle-image {
-    transform: rotate(180deg);
-}
-#options #options-toggle-image {
-    pointer-events: none;
-    transition: transform 250ms ease;
-}
-#options-dropdown {
-    position: absolute;
-    background-color: #222;
-    padding: 0 10px 10px;
-    width: 100%;
-    top: 100%;
-    left: 0;
-    opacity: 0;
-    transform: scaleY(0);
-    transition: transform 250ms ease;
-    transform-origin: center top 0;
-    pointer-events: none;
-}
-#options-dropdown .option {
-    margin-bottom: 10px;
-}
-#options #options-toggle:checked ~ #options-dropdown {
-    pointer-events: all;
-    opacity: 1;
-    transform: scaleY(1);
-}
-#options #options-dropdown select {
-    margin-top: 5px;
 }
 @media (max-width: 950px) {
     .branding-info {
