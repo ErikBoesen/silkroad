@@ -2,10 +2,12 @@ var map, popup, Popup, markers = [];
 const elements = {
     preloader: document.getElementById('preloader'),
     map: document.getElementById('map'),
-    playButton: document.getElementById('play_button'),
+    audioButton: document.getElementById('audio_button'),
     audio: document.getElementById('audio'),
     main: document.getElementsByTagName('main')[0],
     aside: document.getElementsByTagName('aside')[0],
+    title: document.getElementById('title'),
+    description: document.getElementById('description'),
 };
 
 var panToMarkers = true;
@@ -171,6 +173,7 @@ function placeMarkers(sites) {
             position: new google.maps.LatLng(site.lat, site.lng),
             title: site.location,
         });
+        marker.site = site;
         google.maps.event.addListener(marker, 'click', function() {
             details(this);
 
@@ -247,12 +250,12 @@ onkeydown = function(e) {
     }
 }
 
-elements.playButton.onclick = function() {
-    if (elements.audio.paused) {
-        elements.audio.play();
-        playButton.textContent = '||';
+elements.audioButton.onclick = function() {
+    if (elements.audio.muted) {
+        elements.audio.muted = false;
+        elements.audioButton.src = '/img/speaker.svg';
     } else {
-        elements.audio.pause();
-        playButton.textContent = '▶';
+        elements.audio.muted = true;
+        elements.audioButton.src = '/img/speaker_muted.svg';
     }
 }
