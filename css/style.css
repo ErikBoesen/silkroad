@@ -154,6 +154,9 @@ aside {
     overflow-y: auto;
     padding: 15px 10px;
 }
+aside img {
+    max-width: 100%;
+}
 @media (max-width: 950px) {
     .branding-info {
         display: none;
