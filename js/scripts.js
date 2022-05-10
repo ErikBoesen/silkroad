@@ -135,6 +135,7 @@ function initMap() {
             lng: 78
         },
         zoom: 4,
+        minZoom: 3,
         disableDefaultUI: true,
         zoomControl: true,
         mapTypeControl: false,
