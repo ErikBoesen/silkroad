@@ -203,6 +203,39 @@ function openMarker(marker) {
     clearPopups();
     // Create popup
     var info = document.createElement('div');
+
+    let header = document.createElement('h2');
+    header.textContent = marker.site.location;
+    info.appendChild(header);
+
+    let sub = document.createElement('p');
+    sub.className = 'sub';
+    coordinates = '(';
+    coordinates += Math.abs(marker.site.lat) + 'º';
+    if (marker.site.lat >= 0) {
+        coordinates += 'N';
+    } else {
+        coordinates += 'S';
+    }
+    coordinates += ', ';
+    coordinates += Math.abs(marker.site.lng) + 'º';
+    if (marker.site.lng >= 0) {
+        coordinates += 'E';
+    } else {
+        coordinates += 'W';
+    }
+    coordinates += ')';
+    sub.textContent = coordinates;
+    info.appendChild(sub);
+
+    let culture = document.createElement('p');
+    culture.textContent = 'Culture: ' + marker.site.culture;
+    info.appendChild(culture);
+
+    let date = document.createElement('p');
+    date.textContent = 'Date: ' + marker.site.date;
+    info.appendChild(date);
+
     popup = new Popup(new google.maps.LatLng(marker.position.lat(), marker.position.lng()), info);
     popup.setMap(map);
     popupOpen = true;
