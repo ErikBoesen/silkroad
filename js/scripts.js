@@ -2,8 +2,8 @@ var map, popup, Popup, markers = [];
 const elements = {
     preloader: document.getElementById('preloader'),
     map: document.getElementById('map'),
-    audioButton: document.getElementById('audio_button'),
     audio: document.getElementById('audio'),
+    audioButton: document.getElementById('audio_button'),
     main: document.getElementsByTagName('main')[0],
     aside: document.getElementsByTagName('aside')[0],
     title: document.getElementById('title'),
@@ -175,7 +175,7 @@ function placeMarkers(sites) {
         });
         marker.site = site;
         google.maps.event.addListener(marker, 'click', function() {
-            details(this);
+            openMarker(this);
 
             if (panToMarkers) {
                 var scale = 1 / (1 << map.getZoom());
@@ -198,22 +198,18 @@ function placeMarkers(sites) {
     }
 }
 
-function details(marker) {
+function openMarker(marker) {
     clearPopups();
     // Create popup
     var info = document.createElement('div');
     popup = new Popup(new google.maps.LatLng(marker.position.lat(), marker.position.lng()), info);
     popup.setMap(map);
-    console.log('Adding popup');
     popupOpen = true;
 
     // Create sidebar content
     elements.title.textContent = marker.site.location;
     elements.description.textContent = '';
-    console.log(marker.site);
-    console.log(marker.site.art);
     for (let piece of marker.site.art) {
-        console.log(piece);
         let img = document.createElement('img');
         img.src = '/img/art/' + piece.image;
         elements.description.append(img);
@@ -221,6 +217,11 @@ function details(marker) {
         p.textContent = piece.text;
         elements.description.append(p);
     }
+
+    // Set music
+    elements.audio.pause()
+    elements.audio.src = '/audio/' + marker.site.culture.toLowerCase().replace(' ', '_') + '.mp3';
+    elements.audio.play()
 }
 
 var dragged = false;
