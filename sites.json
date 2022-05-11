@@ -13,12 +13,77 @@
         ]
     },
     {
+        "lat": 37.9890,
+        "lng": 23.7328,
+        "location": "Athens, Greece",
+        "date": "",
+        "culture": "Greeks",
+        "art": [
+            {
+                "image": "lekythos.png",
+                "text": "The Greek divinity of Artemis served as a potent vessel for a number of the motifs that are common across the Silk Roads region and to many portrayals of divinities within. The omnipresent motif of \"Potnia Theron\" is one prominent example of such. In this motif, a feminine divinity is shown as a figure flanked by two animals, often grasping one in each hand. Frequently, the divinity is shown as having powerful wings, although this is not necessarily the case in all appearances of the motif. The Potnia Theron style is thought to have originated in Sumeria many thousands of years ago.\n\nArtemis is portrayed here on a more literal vessel. This 6th century lekythos, or olive oil vessel, originated in Thebes and displays Artemis with many of the traditional trappings of the Potnia Theron motif. Devoid of her usual deer accompaniment, she appears here as a muscular, winged figure carrying two upside-down lions by their hind legs, emphasizing Artemis’ status of dominion over nature."
+            }
+        ]
+    },
+    {
+        "lat": 43.015519,
+        "lng": 11.944775,
+        "location": "Chiusi, Italy",
+        "date": "570-560 BCE",
+        "culture": "Greeks",
+        "art": [
+            {
+                "image": "francois_vase.png",
+                "text": "The Potnia Theron motif also manifested on the famous François Vase. While popularly referred to as a vase, the vessel is actually a krater thought to have been used for holding and serving wine. Dated to 570-560 BCE and discovered in an Etruscan tomb in Italy, the krater bears renderings of 270 separate figures, many depicting scenes from Greek mythology. One handle of the vessel depicts an unknown feminine winged divinity holding two animals by her side, in a manifestation of two key components of Potnia Theron, conveying the domination of nature by this divinity. The animals in question appear to be a deer and a lynx or other large feline, the former of which would indicate adjacency to portrayals of Artemis. However, unlike many figures on the François Vase, this figure is unlabelled, and the identity of her divinity is regrettably unclear. Nevertheless, it serves as a clear indicator of the propagation of key motifs that would influence later work across the Silk Roads region."
+            }
+        ]
+    },
+    {
+        "lat": 38.3226,
+        "lng": 23.3204,
+        "location": "Thebes, Greece",
+        "date": "300-100BCE",
+        "culture": "Greeks",
+        "art": [
+            {
+                "image": "antefix.png",
+                "text": "The motif of Potnia Theron also appears in a Greek antefix, or stylized roof support, dating to 300-100 BCE. The piece is crafted of carved stone and was found in the Thebes region of eastern Greece. This figure incorporates many familiar elements of the Potnia Theron motif, bearing gigantic wings, and gripping the heads of two hound-like animals by her side. It also shows manifestations of other common elements enveloped within Potnia Theron depictions, most notably wearing a conical and rounded yet bulbous hat. This theme appears in many depictions of divinities later reaching across Iran, Central Asia, and to China."
+            }
+        ]
+    },
+    {
+        "lat": 36.6999972,
+        "lng": 65.7855301912,
+        "location": "Tillya Tepe, Modern Afghanistan",
+        "date": "100BCE-100CE",
+        "culture": "Bactrians",
+        "art": [
+            {
+                "image": "tillya_tepe_headdress.png",
+                "text": "Many motifs seen in Greek, Iranian, and other deities resurfaced in the pieces found at Tillya Tepe, which date to around 100BCE-100CE. A burial site discovered in the 1970s in northern Afghanistan, Tillya Tepe serves as a time capsule of a wide variety of works that bear witness to the evolution and propagation of divine motifs. On one set of golden pendants, a goddess appears surrounded by composite animals resembling goat- or snake-like species and wearing a rounded hat. These Yuezhi or Kushan pieces show evidence of influence derived from Artemis’ portrayals thousands of miles away in Greece, and shows that both religious ideals and artistic motifs influenced cultures far afield from their origins. The Potnia Theron style evolved as the divinity spread Eastward, showing a clear example of the notion that propagation of artistic motifs and religious ideologies is inseparably intertwined, even when it’s impossible to prove that a deity was entirely transplanted from culture to culture."
+            }
+        ]
+    },
+    {
         "lat": 39.4929331,
         "lng": 67.6053653,
         "location": "Panjakent, Modern Tajikistan",
         "date": "",
         "culture": "Sogdians",
         "art": [
+        ]
+    },
+    {
+        "lat": 0,
+        "lng": 0,
+        "location": "",
+        "date": "",
+        "culture": "Han China",
+        "art": [
+            {
+                "image": "xiwangmu_mirror.png",
+                "text": "After traversing Central Asia and influencing religious attitudes therein, the motifs of Potnia Theron became integrated into the portrayals and surrounding ideologies of the Queen Mother of the West, a Chinese divinity. The Queen Mother, or Xiwangmu, emerged in China in the first millenium BCE, and was later integrated into contemporary Sinospheric belief systems such as Taoism and Confucianism, but not before serving as an independent object of worship for many centuries and undergoing substantial acculturated channge. In this mirror, we can observe Xiwangmu surrounded by a wide variety of composite animal figures and wearing a tall, tapered hat much like the goddesses pictured on pendants at Tillya Tepe. Interestingly, she also appears opposite the King of the East, a consort to her divinity. This King appears only in later artistic records, and, fascinatingly, appears to have been a latter addition to her character in accordance with contemporary gender norms. The specific adaptations of this divinity to Han culture speak further to how artistic portrayals and theological conceptions of deities, as seen through the eyes of an influenced culture, act on each other to propagate both across geographic space."
+            }
         ]
     }
 ]
