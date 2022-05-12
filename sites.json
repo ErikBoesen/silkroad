@@ -1,5 +1,18 @@
 [
     {
+        "lat": 37.6664,
+        "lng": 32.8257,
+        "location": "Çatalhöyük, Modern Turkey",
+        "date": "6000 BC",
+        "culture": "Neolithic",
+        "art": [
+            {
+                "image": "seated_woman.jpg",
+                "text": "This piece, known as the Seated Woman of Çatalhöyük, is a neolithic-era clay sculpture found at Çatalhöyük, a site in modern Turkey. The sculpture depicts a large, female divinity seated on a throne and gripping two lions by her sides. Although little is known about the specific religious practice of the culture that created this object, it is the earliest known example of the Potnia Theron motif, which is an omnipresent motif that later propagated through other cultures such as Greece, Sasanid Iran, Bactria, the Khitan Liao culture, and China. The Seated Woman, which bears examples of key elements of the Potnia Theron motif, being a female goddess that holds two animals by her sides to show dominance over the natural world, serves as a powerful indicator of how far back into history these artistic ideas and conceptions of divinity can trace their roots."
+            }
+        ]
+    },
+    {
         "lat": 41.494649,
         "lng": 110.2137863,
         "location": "Paoshan, Inner Mongolia, China",
@@ -22,6 +35,10 @@
             {
                 "image": "lekythos.png",
                 "text": "The Greek divinity of Artemis served as a potent vessel for a number of the motifs that are common across the Silk Roads region and to many portrayals of divinities within. The omnipresent motif of \"Potnia Theron\" is one prominent example of such. In this motif, a feminine divinity is shown as a figure flanked by two animals, often grasping one in each hand. Frequently, the divinity is shown as having powerful wings, although this is not necessarily the case in all appearances of the motif. The Potnia Theron style is thought to have originated in Sumeria many thousands of years ago.\n\nArtemis is portrayed here on a more literal vessel. This 6th century lekythos, or olive oil vessel, originated in Thebes and displays Artemis with many of the traditional trappings of the Potnia Theron motif. Devoid of her usual deer accompaniment, she appears here as a muscular, winged figure carrying two upside-down lions by their hind legs, emphasizing Artemis’ status of dominion over nature."
+            },
+            {
+                "image": "artemis_bowl.png",
+                "text": "Motifs and portrayals pertaining to this divinity travelled through Iran, Sogdia, and countless cultural entities before arriving in China. However, the goddess may have her roots in the Greek religious figures of Aphrodite and Artemis. These goddesses' imagery decorate countless pieces from Greek territories including Athens, Thebes, and more. Artemis in particular is frequently portrayed alongside a spotted deer or instance, as on this 12-inch wide drinking dish found in the Athens region, which now can be found in the National Archeological Museum of Athens. Its formation out of red figure pottery is iconic of Attic and broader Greek artistic material motifs, but its form and craft draw upon themes that cross the Silk Roads region.\n\nThe use of deer in partnership with her divinity draws Artemis into connection with powerful motifs that associate with that animal across the Silk Roads region. One other example of the deer motif’s appearance in a similar geographic region is the deerstones, 10 foot tall granite obelisks scattered from northern Mongolia to eastern Kazakhstan. These stones exemplify the symbolism of the deer as a mythically powerful creature with spiritual significance, and their dating to the late bronze age of 3300-300 BCE shows that such motifs have propagated and retained significance through time. Another example of deer holding powerful significance is the further-West settlement of Filippovka, a burial mound excavated in the 1980s just to the north of the Caspian sea. They show ornamented antlers that stretch out over large areas in a surrealistically regular manner buffered by long ears, and their bodies bear elegant curves that outline their shape. Through the appearance of this animal motif across the road system, we frequently see deer associated with societal power, wealth, and majesty. By utilizing this motif, the imagery of Artemis is associated with such values."
             }
         ]
     },
@@ -74,11 +91,12 @@
         ]
     },
     {
-        "lat": 0,
+        "lat": 39,
         "lng": 0,
         "location": "",
         "date": "",
         "culture": "Han China",
+        "music_source": "https://www.youtube.com/watch?v=DKmrWjxeFCQ",
         "art": [
             {
                 "image": "xiwangmu_mirror.png",

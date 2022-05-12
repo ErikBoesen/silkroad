@@ -111,6 +111,7 @@ div a[rel="noopener"] img,
 }
 #map {
     transition: filter ease 0.75s;
+    position: fixed;
 }
 #branding {
     position: absolute;
@@ -151,7 +152,6 @@ aside {
     height: 100vh;
     color: white;
     z-index: -1;
-    overflow-y: scroll;
     padding: 15px 10px;
 }
 aside img {
