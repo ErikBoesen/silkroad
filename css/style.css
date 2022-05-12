@@ -144,14 +144,14 @@ main.open {
     transform: translateX(-400px);
 }
 aside {
-    width: 400px;
+    position: absolute;
     top: 0;
     right: 0;
-    position: absolute;
+    width: 400px;
+    height: 100vh;
     color: white;
     z-index: -1;
-    height: 100vh;
-    overflow-y: auto;
+    overflow-y: scroll;
     padding: 15px 10px;
 }
 aside img {

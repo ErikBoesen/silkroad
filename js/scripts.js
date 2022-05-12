@@ -6,7 +6,6 @@ const elements = {
     audioButton: document.getElementById('audio_button'),
     main: document.getElementsByTagName('main')[0],
     aside: document.getElementsByTagName('aside')[0],
-    title: document.getElementById('title'),
     description: document.getElementById('description'),
 };
 
@@ -241,8 +240,6 @@ function openMarker(marker) {
     popupOpen = true;
 
     // Create sidebar content
-    elements.title.textContent = marker.site.location;
-    elements.description.textContent = '';
     for (let piece of marker.site.art) {
         let img = document.createElement('img');
         img.src = '/img/art/' + piece.image;
