@@ -112,6 +112,7 @@ div a[rel="noopener"] img,
 #map {
     transition: filter ease 0.75s;
     position: fixed;
+    top: 0;
 }
 #branding {
     position: absolute;

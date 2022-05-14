@@ -51,29 +51,5 @@
     .popup-tip {
         width: 100%;
     }
-    .popup-content .students-list {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        max-height: 365px;
-        justify-content: start;
-        align-content: start; /* Spacing between lines */
-        align-items: start;
-        width: max-content;
-        height: auto;
-    }
-    .popup-content .student-container {
-        flex: 0 0 auto;
-        height: auto;
-        width: 200px;
-    }
-    .popup-content .institution-container {
-        margin: 0px auto;
-        max-width: calc(200px * var(--num-columns));
-    }
-    .popup-content {
-        width: calc(200px * var(--num-columns));
-        box-sizing: content-box;
-    }
 }
 

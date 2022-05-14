@@ -155,7 +155,7 @@ function initMap() {
 }
 
 async function getSites() {
-    return fetch('/sites.json')
+    return fetch('sites.json')
         .then(request => request.json())
         .then(sites => {
             placeMarkers(sites);
@@ -240,9 +240,10 @@ function openMarker(marker) {
     popupOpen = true;
 
     // Create sidebar content
+    elements.description.textContent = '';
     for (let piece of marker.site.art) {
         let img = document.createElement('img');
-        img.src = '/img/art/' + piece.image;
+        img.src = 'img/art/' + piece.image;
         elements.description.append(img);
         let p = document.createElement('p');
         p.textContent = piece.text;
@@ -251,7 +252,7 @@ function openMarker(marker) {
 
     // Set music
     elements.audio.pause()
-    elements.audio.src = '/audio/' + marker.site.culture.toLowerCase().replace(' ', '_') + '.mp3';
+    elements.audio.src = 'audio/' + marker.site.culture.toLowerCase().replace(' ', '_') + '.mp3';
     elements.audio.play()
 }
 
@@ -301,9 +302,9 @@ onkeydown = function(e) {
 elements.audioButton.onclick = function() {
     if (elements.audio.muted) {
         elements.audio.muted = false;
-        elements.audioButton.src = '/img/speaker.svg';
+        elements.audioButton.src = 'img/speaker.svg';
     } else {
         elements.audio.muted = true;
-        elements.audioButton.src = '/img/speaker_muted.svg';
+        elements.audioButton.src = 'img/speaker_muted.svg';
     }
 }
